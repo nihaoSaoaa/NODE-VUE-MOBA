@@ -1,0 +1,39 @@
+.el-header {
+  background-color: #B3C0D1;
+  color: #333;
+  line-height: 60px;
+}
+
+.el-aside {
+  color: #333;
+}
+label {
+  text-align: center;
+}
+
+.category-edit {
+  width: 100%;
+}
+.avatar-uploader .el-upload {
+  border: 1px dashed #949393;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  min-width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.avatar {
+  min-width: 100px;
+  height: 100px;
+  display: block;
+}
