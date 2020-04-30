@@ -10,6 +10,7 @@ app.use(express.json())
 
 // 静态文件可访问
 app.use('/uploads', express.static(__dirname + '/uploads'))
+app.use('/admin', express.static(__dirname + '/admin'))
 
 require('./plugins/db')(app)
 require('./routes/admin/index')(app)

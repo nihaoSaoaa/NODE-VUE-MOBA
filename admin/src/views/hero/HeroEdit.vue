@@ -126,10 +126,10 @@
               <el-form-item label="搭档英雄">
                 <el-select filterable v-model="item.hero">
                   <el-option 
-                  v-for="hero in heroes"
-                  :key="hero._id"
-                  :value="hero._id"
-                  :label="hero.name"
+                    v-for="hero in heroes"
+                    :key="hero._id"
+                    :value="hero._id"
+                    :label="hero.name"
                   ></el-option>
                 </el-select>
               </el-form-item>
@@ -148,7 +148,6 @@
         <el-button type="primary" native-type="submit">保存</el-button>
       </el-form-item>
     </el-form>
-    {{model}}
   </div>
 </template>
 

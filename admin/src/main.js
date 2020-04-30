@@ -9,7 +9,7 @@ import { upload } from './common/mixin'
 Vue.prototype.$http = http
 Vue.mixin(upload);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 new Vue({
   router,

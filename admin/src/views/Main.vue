@@ -2,7 +2,7 @@
   <el-container style="height: 100vh">
 
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu router unique-opened :default-active="$route.path">
+      <el-menu router  :default-active="$route.path">
         
         <el-submenu index="1">
           <template slot="title"><i class="el-icon-message"></i>内容管理</template>
@@ -59,7 +59,7 @@
             <el-dropdown-item>删除</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>后台管理</span>
+        <span>LOL后台管理</span>
       </el-header>
       
       <el-main>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="login-bg">
     <el-card header="请先登录" class="login-card">
       <el-form @submit.native.prevent="login">
         <el-form-item label="账号">
@@ -38,8 +38,16 @@ export default {
 </script>
 
 <style scoped>
+.login-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/img/loginbg.jpg');
+  background-size: cover;
+}
 .login-card{
   width: 25rem;
-  margin: 5rem auto;
 }
 </style>

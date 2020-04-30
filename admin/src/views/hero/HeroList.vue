@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>英雄列表</h1>
-    <el-table :data="items">
+    <el-table :data="heroes">
       <el-table-column prop="_id" label="ID" width="240"></el-table-column>
       <el-table-column prop="name" label="英雄名称"></el-table-column>
       <el-table-column prop="avatar" label="头像">
@@ -24,20 +24,10 @@
 </template>
 
 <script>
+import { heroes } from '../../common/mixin'
 export default {
-  data() {
-    return {
-      items: []
-    }
-  },
-  created () {
-    this.fetch();
-  },
+  mixins: [heroes],
   methods: {
-    async fetch() {
-      const res = await this.$http.get("/rest/heroes");
-      this.items = res.data;
-    },
     remove(row) {
       this.$confirm(`是否确定要删除分类 "${row.name}"`, "提示", {
         confirmButtonText: "确定",

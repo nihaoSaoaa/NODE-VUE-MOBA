@@ -33,6 +33,10 @@ export default {
     async fetch() {
       const res = await this.$http.get("/rest/categories");
       this.items = res.data;
+      this.items.sort((item1, item2) => {
+        if (item1.parent) return 1;
+        if (item2.parent) return -1;
+      })
     },
     remove(row) {
       this.$confirm(`是否确定要删除分类 "${row.name}"`, "提示", {

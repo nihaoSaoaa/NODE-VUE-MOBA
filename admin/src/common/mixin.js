@@ -42,7 +42,7 @@ export const heroes = {
   methods: {
     async fetchHeroes() {
       const res = await this.$http.get(`/rest/heroes`)
-      this.items = res.data
+      this.heroes = res.data
     }
   },
 }
