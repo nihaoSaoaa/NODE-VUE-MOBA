@@ -41,7 +41,7 @@ export default {
             message: "删除成功!"
           });
         }
-        this.fetch();
+        this.fetchHeroes();
       });
     }
   },

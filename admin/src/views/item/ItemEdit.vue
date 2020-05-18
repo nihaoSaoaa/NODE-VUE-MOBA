@@ -11,7 +11,7 @@
           :action="uploadUrl"
           :headers="authHeaders"
           :show-file-list="false"
-          :on-success="afterUpload"
+          :on-success="res => $set(model, 'icon', res.url)"
         >
           <img v-if="model.icon" :src="model.icon" class="avatar">
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
@@ -63,8 +63,6 @@ export default {
       this.model = res.data
     },
     afterUpload(res) {
-      // this.model.icon = res.url;
-      // 响应式 $set
       this.$set(this.model, 'icon', res.url);
     }
   },

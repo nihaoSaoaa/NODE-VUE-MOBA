@@ -17,7 +17,8 @@
               <el-form-item label="头像">
                 <el-upload
                   class="avatar-uploader"
-                  :action="$http.defaults.baseURL + '/upload'"
+                  :action="uploadUrl"
+                  :headers="authHeaders"
                   :show-file-list="false"
                   :on-success="res => $set(model, 'avatar', res.url)"
                 >
