@@ -9,7 +9,7 @@ module.exports = app => {
   const multer =  require('multer')
 
   
-   // 创建资源
+  // 创建资源
   router.post('/', async (req, res) => {
     const model = await req.Model.create(req.body);
     res.send(model);
@@ -56,6 +56,7 @@ module.exports = app => {
   app.post('/admin/api/upload', authMiddleWare(), upload.single('file'), async (req, res, next) => {
     const file = req.file;
     file.url = `http://test.mjh.cool/uploads/${file.filename}`;
+    // file.url = `http://localhost:3000/uploads/${file.filename}`;
     res.send(file);
   })
 
