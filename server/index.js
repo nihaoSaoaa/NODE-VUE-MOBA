@@ -10,12 +10,6 @@ app.use(cors())
 // 数据 json 化
 app.use(express.json())
 // history模式兼容
-app.use(history({
-  rewrites: [
-    { from: /^\/(home|cart|category|profile:id|detail:id)\/.*$/, to: './mall/index.html' },
-    { from: /^\/admin\/.*$/, to: './admin/index.html' }
-  ]
-}))
 
 // 静态文件可访问
 app.use('/uploads', express.static(__dirname + '/uploads'))

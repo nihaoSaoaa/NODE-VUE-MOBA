@@ -24,7 +24,6 @@ import Login from './views/login/Login.vue'
 Vue.use(Router)
 
 const router =  new Router({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     { path: '/login', name: 'login', component: Login, meta: { isPublic: true } },
